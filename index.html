@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<title>D3 Vis</title>
+	<style>
+		.tooltip {
+		  position: absolute;
+		  text-align: center;
+		  padding: 8px;
+		  margin-top: -20px;
+		  font: 10px sans-serif;
+		  background: #ddd;
+		  pointer-events: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div>
+			<h2>10 years of earthquake data</h2>
+			<br>
+			<br>Dataset: https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2006-01-01&endtime=2016-12-31&minmagnitude=6&maxmagnitude=9
+			<br>
+			<br>Description: My main goal with this project was to visualize “significant” earthquakes over the past 10 years. According to many sources on the web, these are earthquakes characterized by “causing a lot of damage in very populated areas”, at the very least. These correspond to magnitudes of 6.0 and above. Data was provided by the USGS.</div>
+		<div class="vis1 repeatContainer">
+			<h3 class='question-header'>Question 1</h3>
+			<div class="question">My initial question stemmed from my general interest in earthquakes. Being from the bay area, I’ve experienced a good amount of these. However, I’ve never experienced anything that was extremely dangerous or life threatening and I felt it would be fascinating to see where in recent history these types of earthquakes have occurred, and in what volume. I felt that being able to see an overview of this would allow me to then assess it in more specific ways.</div>
+			<div class='chart'>
+				<svg id="vis1"></svg>
+			</div>
+			<div class="visCaption">Caption: A scatter plot depicting earthquakes of magnitude 6.0-9.0 (y axis) and when they occurred from the years 2006-2016 (x-axis)</div>
+			<div class="visAnalysis">Analysis: The reasoning for focusing on this particular set of data was also due to the volume of stronger earthquakes in comparison to the less impactful ones (sub-6.0). In a sense, these were much rarer being that they do not occur as frequently. This was something I felt should be highlighted. In order to properly encompass this amount of data, I felt it would be best to represent each earthquake as dot because they were each a separate event. Using something like line or bar chart wouldn’t allow me separate each value, and it would appear as more of a group of events versus their own independent occasion. To take it one step further, I wanted to know how this specific range of data was distributed.</div>
+		</div>
+		<div class="repeatContainer">
+			<h3 class='question-header'>Question 2</h3>
+			<div class="question">As mentioned, with my second visualization I wanted to delve further into the statistical distribution of this range (6.0-9.0).</div>
+			<svg id="vis2"></svg>
+			<div class="visCaption">Caption: A histogram representing the distribution of earthquake magnitudes across the data set.</div>
+			<div class="visAnalysis">Analysis: After having completed this visualization, I felt it gave a much clearer and more refined view of how frequently each event occurred in relation to each other. While the scatterplot was useful in identifying each seperate occasion, the data points were all over the place, and it could be difficult to see the frequency of these values — especially those on the lower end of the scale. With this is mind, I thought seeing what areas of the world where these distributions occurred would allow for a variety of useful conclusions.</div>
+		</div>
+		<div class="vis3 repeatContainer">
+			<h3 class='question-header'>Question 3</h3>
+			<div class="question">Where in the world did the most earthquakes occur throughout this 10 year span?</div>
+			<div class='chart'>
+				<svg id="vis3"></svg>
+			</div>
+			<div class="visCaption">Caption: A map of the world with color encoding year, the brighter the color, the more recent the earthquake. The area of each circle encodes the magnitude of each earthquake — more area = larger magnitude.</div>
+			<div class="visAnalysis">Analysis: With the data being based heavily on where the earthquakes occurred, I wanted to incorporate the geographical values from the data set with my final technique. Using this technique would allow us to see what parts of the world had the most volume of earthquakes, as well as which year each one occurred.</div>
+		</div>
+		<div class="conclusion">Conclusion: Overall, I really enjoyed working with this data set. I felt it had a lot of valuable aspects that led me to gain a better understanding of where and how often earthquakes of a large magnitude occur. For example, with the map, I noticed that most earthquakes occur in the “Ring of Fire” around the Pacific Ocean. Living close to this is something that is definitely frightening! I also wanted to mention that I feel simplicity and functionality are better than creating something eye-catching. In data visualization, it is more important to create things that accurately represent the data, than to create something pretty. For me, conveying the data in a concise and accurate manner (and thusly, maintaining its scientific integrity), was the most important aspect to this project.</div>
+		<script src='scatter.js'></script>
+		<script src='histogram.js'></script>
+		<script src='earth_map.js'></script>
+	</div>
+</body>
+
+</html>

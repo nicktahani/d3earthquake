@@ -1,0 +1,109 @@
+.main {
+	font-family: "Helvetica", "Arial", sans-serif;
+	max-width: 960px;
+	margin: auto;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background-color: #ffffff;
+}
+
+
+.repeatContainer {
+	position:relative;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	padding: 15px;
+	padding-bottom:22px;
+	background-color: #ffffff;
+}
+header {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+
+.conclusion {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	padding: 15px;
+}
+
+.question {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	padding: 15px;
+}
+
+svg#vis1 {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	/*height:500px;*/
+	/*width:980px;*/
+}
+
+svg#vis2 {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	/*height:500px;*/
+	/*width:980px;*/
+}
+
+
+svg#vis3 {
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	/*height:500px;*/
+	/*width:980px;*/
+}
+.visCaption {
+	display: flex;
+	flex-direction:row;
+	justify-content: left;
+	padding: 15px;
+}
+
+.visAnalysis {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	padding: 15px;
+}
+
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.vis1 .chart {
+	position: relative;
+}
+
+.vis3 .chart {
+	position: relative;
+}
+
+h3.question-header {
+	border-bottom: 2px solid #000;
+}
